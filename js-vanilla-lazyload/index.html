@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function lazyScript() {
+        var scriptVar = document.createElement("script");
+        scriptVar.src = "";
+        document.body.appendChild(scriptVar);
+    }
+    if (window.addEventListener)
+        window.addEventListener("load", lazyScript, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", lazyScript);
+    else window.onload = lazyScript;
+</script>
+</body>
+</html>
